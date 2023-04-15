@@ -1,19 +1,12 @@
 package com.example.petstore.impl
 
+import com.example.petstore.generated.petstore.{ListUsersRequest, Pet, PetByIdRequest, PetByIdResponse, StoreUsersResponse, User, UserByNameRequest, UserByNameResponse}
 import com.example.petstore.generated.petstore.ZioPetstore._
 
 import zio.{IO, RefM}
 import zio.stream.{Stream, ZStream}
 
 import io.grpc.Status
-import com.example.petstore.generated.petstore.User
-import com.example.petstore.generated.petstore.PetByIdRequest
-import com.example.petstore.generated.petstore.PetByIdResponse
-import com.example.petstore.generated.petstore.UserByNameRequest
-import com.example.petstore.generated.petstore.UserByNameResponse
-import com.example.petstore.generated.petstore.Pet
-import com.example.petstore.generated.petstore.ListUsersRequest
-import com.example.petstore.generated.petstore.StoreUsersResponse
 
 class ZioPetstoreImpl(userState: ZioPetstoreImpl.State) extends PetStoreService {
 
